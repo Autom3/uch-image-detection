@@ -32,7 +32,7 @@ let getScores = (image) => {
 
         const xInit = 492
         const yHeights = [315, 475, 632, 793]
-        
+
         if (image.bitmap.width !== 1920 || image.bitmap.height !== 1080) {
             return reject('Please provide a 1920x1080 screenshot')
         }
@@ -83,6 +83,10 @@ let getScores = (image) => {
 
         let xStep = (foregrounds[1] - foregrounds[0]) / 5
         let ySections = foregrounds.length - 1
+
+        if (foregrounds[foregrounds.length - 2] - foregrounds[foregrounds.length - 3] > xStep * 6) {
+            ySections--
+        }
 
         for (let i = 0; i < testPixels.length; i++) {
             for (let j = 0; j < ySections; j++) {
