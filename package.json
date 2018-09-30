@@ -1,0 +1,22 @@
+{
+  "name": "uch-image-detection",
+  "version": "0.0.1",
+  "description": "A node module to interpret screenshots of UCH",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Autom3/uch-image-detection.git"
+  },
+  "keywords": [
+    "UCH"
+  ],
+  "author": "Autom3",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Autom3/uch-image-detection/issues"
+  },
+  "homepage": "https://github.com/Autom3/uch-image-detection#readme",
+  "dependencies": {
+    "jimp": "^0.5.3"
+  }
+}
