@@ -17,10 +17,10 @@ const imageUrl = 'test-image.png'
 const uchImageDetection = require('uch-image-detection');
 
 uchImageDetection(imageUrl)
-	.then((playerScores) => {
-		console.log(playerScores)
-	})
-	.catch((error) => {
-		console.error(error)
-	})
+    .then((playerScores) => {
+        console.log(playerScores)
+    })
+    .catch((error) => {
+        console.error(error)
+    })
 ```
