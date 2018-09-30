@@ -1,6 +1,6 @@
 {
   "name": "uch-image-detection",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node module to interpret screenshots of UCH",
   "main": "index.js",
   "repository": {
