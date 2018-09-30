@@ -1,30 +1,5 @@
 const Jimp = require('jimp')
 
-const radius = {x: 7, y: 15}
-const mainColours = {
-    'background': 0xe0d8bdff,
-    // 'goal': ,
-    // 'solo': ,
-    // 'postmortem': ,
-    // 'trap': ,
-    // 'coin': ,
-    // 'comeback': ,
-    // 'first': ,
-    // 'second': ,
-    // 'third': ,
-    // 'fourth': ,
-}
-const testPixels = [
-    [],
-    [],
-    [],
-    []
-]
-const playerScores = [0, 0, 0, 0]
-
-const xInit = 492
-const yHeights = [315, 475, 632, 793]
-
 let colourDistanceSquared = (a, b) => {
     let uA = Jimp.intToRGBA(a)
     let uB = Jimp.intToRGBA(b)
@@ -33,6 +8,31 @@ let colourDistanceSquared = (a, b) => {
 
 let getScores = (image) => {
     return new Promise((resolve, reject) => {
+        const radius = {x: 7, y: 15}
+        const mainColours = {
+            'background': 0xe0d8bdff,
+            // 'goal': ,
+            // 'solo': ,
+            // 'postmortem': ,
+            // 'trap': ,
+            // 'coin': ,
+            // 'comeback': ,
+            // 'first': ,
+            // 'second': ,
+            // 'third': ,
+            // 'fourth': ,
+        }
+        const testPixels = [
+            [],
+            [],
+            [],
+            []
+        ]
+        const playerScores = [0, 0, 0, 0]
+
+        const xInit = 492
+        const yHeights = [315, 475, 632, 793]
+        
         if (image.bitmap.width !== 1920 || image.bitmap.height !== 1080) {
             return reject('Please provide a 1920x1080 screenshot')
         }
